@@ -1,0 +1,57 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sky Background */
+.sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #141414; /* Dark night sky color */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Rocket Image Styling */
+.rocket {
+  width: 80px; /* Adjust size as needed */
+  position: relative;
+  bottom: 10px;
+  transition: transform 1.5s ease-in; /* Smooth launch effect */
+}
+
+/* Fireworks (Explosion Effect) */
+.fireworks {
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  display: none;
+  animation: explode 0.7s ease-out forwards;
+}
+
+/* Explosion Animation */
+@keyframes explode {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 1; background-color: #ffdd00; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* Diwali Text */
+.diwali-text {
+  font-size: 4rem;
+  color: #ffdd00;
+  text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffa500;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
